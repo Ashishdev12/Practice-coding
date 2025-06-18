@@ -1,0 +1,81 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container */
+.continer {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Action items layout */
+.action-items {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Blue buttons */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Input styling */
+input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Joke list */
+#jokeList {
+  list-style: none;
+  padding: 0;
+}
+
+#jokeList li {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+li:hover {
+ transform: scale(1.02);
+}
+
+/* Delete button style */
+.deleteButton {
+  background-color: #e86371;
+  font-size: 12px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #a71d2a;
+}
