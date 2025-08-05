@@ -1,3 +1,5 @@
+//This code defines a curried function called multiply that allows you to chain multiplications like this:
+
 function multiply(a){
     let product = a;
     function innerMultiply(b){

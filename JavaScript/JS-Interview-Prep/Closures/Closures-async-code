@@ -1,0 +1,16 @@
+
+
+
+function fetchData(url) {
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      processData(data);
+    });
+
+  function processData(data) {
+    console.log('Processing data:', data);
+  }
+}
+
+fetchData('https://api.example.com/data');

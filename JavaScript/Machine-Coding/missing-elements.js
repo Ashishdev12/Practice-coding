@@ -1,15 +1,26 @@
-// Find missing number from the array
+// // Find missing number from the array
 
-const intArray = [1,2,3,4,5,6,9,10];
+// function factorial(arr){
+//     for(let i =0; i<arr.length; i++){
+//         return arr * (arr - 1)/2
+//     }
+    
+// }
 
-const findMissingNumber = (num) => {
-    const missingNumber = [];
-    intArray.forEach((element, index)=> {
-        if(index + 1 != element){
-            missingNumber.push(index + 1)
-        }
-    })
-    return missingNumber;
+// const result = factorial(5);
+// console.log(result);
+
+
+let inputNumber = prompt("Please Enter your number")
+let fact = 1;
+
+if(inputNumber < 0){
+    console.log(`Negative number ${inputNumber} is not allowed`);
+} else {
+for(let i =1; i<inputNumber; i++){
+        fact += fact*i
+      
+       
+    }
+    console.log(`factorial of ${inputNumber} is ${fact}`);
 }
-
-console.log(findMissingNumber(intArray));

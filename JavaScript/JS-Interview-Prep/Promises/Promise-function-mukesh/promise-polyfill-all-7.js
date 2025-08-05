@@ -35,7 +35,7 @@ Promise.myAll = function (listOfArrays) {
 async function getData() {
   try {
     const result = await Promise.myAll([
-      getSquare(2, 1000),
+      getSquare(2, 2000),
       getSquare(4, 1000),
     ]);
     console.log(result);

@@ -11,14 +11,27 @@ class MyPromise {
     executor(this.resolve.bind(this), this.reject.bind(this))
   }
 
-   then(cb) {
-      this.onSuccess = cb;
-      if(this.isFulfilled && !this.isCalled){
-        this.isCalled = true
-        this.onSuccess(this.value)
-      }
-      return this;
-    };
+  static resolve(value){
+    return new MyPromise((res,rej)=>{
+      res(value)
+    })
+  }
+
+  // Same this is the static method functions
+  //  static reject(value){
+  //   return new MyPromise((res,rej)=>{
+  //     rej(value)
+  //   })
+  // }
+
+  //  then(cb) {
+  //     this.onSuccess = cb;
+  //     if(this.isFulfilled && !this.isCalled){
+  //       this.isCalled = true
+  //       this.onSuccess(this.value)
+  //     }
+  //     return this;
+  //   };
 
     catch(cb) {
       this.onFailed = cb;
@@ -50,11 +63,19 @@ class MyPromise {
 }
 
 const myPromise = new MyPromise((res,rej)=>{
-    setTimeout(()=>{
+    // setTimeout(()=>{
         // res("Data received");
-        rej("operation failed")
+        // rej("operation failed")
         
-    },1000)
+    // },1000)
+    setTimeout(()=> {
+        const randomNumber = Math.floor(Math.random() * 100)
+        if(randomNumber < 100){
+            res(randomNumber)
+        } else {
+            rej('Operation failed')
+        }
+    },500)
 });
 
 myPromise
@@ -64,6 +85,13 @@ myPromise
   .catch((err) => {
     console.log(err);
   });
+
+ // remove comment this is static method
+  // const myPromise1 = MyPromise.resolve(123);
+  // myPromise1.then((value)=>{
+  //   console.log(value);
+  // })
+
 
 
 

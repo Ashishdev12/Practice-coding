@@ -1,9 +1,9 @@
 console.log("Pollyfill");
 
 const arr = [2,3,4,5,6]
-const result1 = arr.filter((item)=>{
-    return item%2 === 0
-})
+// const result1 = arr.filter((item)=>{
+//     return item%2 === 0
+// })
 
 Array.prototype.myFilter = function(cb){
     const myArray = this
@@ -21,7 +21,7 @@ const result = arr.myFilter((item,i,Oarray)=>{
 })
 
 
-console.log(result,result1);
+console.log(result);
 
 
 
